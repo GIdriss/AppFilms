@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+    <EditText
+            android:background="@drawable/loginstyle"
+            android:id="@+id/edtName"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:ems="12"
+            android:hint="@string/votre_login"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/edtPassword"
+            android:layout_centerHorizontal="true" android:autofillHints=""/>
+
+    <EditText
+            android:background="@drawable/loginstyle"
+            android:id="@+id/edtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+
+            android:hint="@string/votre_mot_de_pass"
+            android:inputType="textPassword"
+            android:layout_above="@+id/btnValider"
+            android:layout_alignLeft="@+id/edtName"
+            android:layout_alignStart="@+id/edtName"
+            android:layout_alignRight="@+id/edtName"
+            android:layout_alignEnd="@+id/edtName" />
+
+    <Button
+            android:id="@+id/btnValider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valider"
+            android:layout_marginBottom="13dp"
+            android:layout_above="@+id/btnInscription"
+            android:layout_centerHorizontal="true" />
+
+    <Button
+            android:id="@+id/btnInscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/s_inscrire"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/btnOublie"
+            android:layout_centerHorizontal="true" />
+
+    <Button
+            android:id="@+id/btnOublie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mot_de_pass_oubli"
+            android:background="#ffffff"
+            android:textStyle="italic"
+            android:textSize="10sp"
+            android:layout_marginBottom="68dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/edtPassword"
+            android:layout_alignStart="@+id/edtPassword"
+            android:layout_alignRight="@+id/edtPassword"
+            android:layout_alignEnd="@+id/edtPassword" tools:ignore="SmallSp"/>
+
+</RelativeLayout>

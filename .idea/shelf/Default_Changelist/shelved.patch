@@ -1,0 +1,961 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1612953725678)
++++ b/.idea/vcs.xml	(date 1612953725678)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_refresh_black_24dp.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_refresh_black_24dp.xml b/app/src/main/res/drawable/ic_refresh_black_24dp.xml
+new file mode 100644
+--- /dev/null	(date 1613305605031)
++++ b/app/src/main/res/drawable/ic_refresh_black_24dp.xml	(date 1613305605031)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="24dp"
++        android:height="24dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++            android:fillColor="#FF000000"
++            android:pathData="M17.65,6.35C16.2,4.9 14.21,4 12,4c-4.42,0 -7.99,3.58 -7.99,8s3.57,8 7.99,8c3.73,0 6.84,-2.55 7.73,-6h-2.08c-0.82,2.33 -3.04,4 -5.65,4 -3.31,0 -6,-2.69 -6,-6s2.69,-6 6,-6c1.66,0 3.14,0.69 4.22,1.78L13,11h7V4l-2.35,2.35z"/>
++</vector>
+\ No newline at end of file
+Index: app/src/main/res/drawable/shape_retry_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/shape_retry_round.xml b/app/src/main/res/drawable/shape_retry_round.xml
+new file mode 100644
+--- /dev/null	(date 1613305549512)
++++ b/app/src/main/res/drawable/shape_retry_round.xml	(date 1613305549512)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++       android:shape="oval">
++
++    <stroke android:color="@color/placeholder_grey"
++            android:width="2dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/appfilms/Results.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/Results.java b/app/src/main/java/com/example/appfilms/Results.java
+new file mode 100644
+--- /dev/null	(date 1613469195990)
++++ b/app/src/main/java/com/example/appfilms/Results.java	(date 1613469195990)
+@@ -0,0 +1,150 @@
++package com.example.appfilms;
++
++import com.google.gson.annotations.Expose;
++import com.google.gson.annotations.SerializedName;
++
++import java.util.List;
++
++public class Results {
++
++        private String posterPath;
++
++        private Boolean adult;
++
++        private String overview;
++
++        private String releaseDate;
++
++        private List<Integer> genreIds = null;
++
++        private Integer id;
++
++        private String originalTitle;
++
++        private String originalLanguage;
++
++        private String title;
++
++        private String backdropPath;
++
++        private Double popularity;
++
++        private Integer voteCount;
++
++        private Boolean video;
++
++        private Double voteAverage;
++
++        public String getPosterPath() {
++            return posterPath;
++        }
++
++        public void setPosterPath(String posterPath) {
++            this.posterPath = posterPath;
++        }
++
++        public Boolean getAdult() {
++            return adult;
++        }
++
++        public void setAdult(Boolean adult) {
++            this.adult = adult;
++        }
++
++        public String getOverview() {
++            return overview;
++        }
++
++        public void setOverview(String overview) {
++            this.overview = overview;
++        }
++
++        public String getReleaseDate() {
++            return releaseDate;
++        }
++
++        public void setReleaseDate(String releaseDate) {
++            this.releaseDate = releaseDate;
++        }
++
++        public List<Integer> getGenreIds() {
++            return genreIds;
++        }
++
++        public void setGenreIds(List<Integer> genreIds) {
++            this.genreIds = genreIds;
++        }
++
++        public Integer getId() {
++            return id;
++        }
++
++        public void setId(Integer id) {
++            this.id = id;
++        }
++
++        public String getOriginalTitle() {
++            return originalTitle;
++        }
++
++        public void setOriginalTitle(String originalTitle) {
++            this.originalTitle = originalTitle;
++        }
++
++        public String getOriginalLanguage() {
++            return originalLanguage;
++        }
++
++        public void setOriginalLanguage(String originalLanguage) {
++            this.originalLanguage = originalLanguage;
++        }
++
++        public String getTitle() {
++            return title;
++        }
++
++        public void setTitle(String title) {
++            this.title = title;
++        }
++
++        public String getBackdropPath() {
++            return backdropPath;
++        }
++
++        public void setBackdropPath(String backdropPath) {
++            this.backdropPath = backdropPath;
++        }
++
++        public Double getPopularity() {
++            return popularity;
++        }
++
++        public void setPopularity(Double popularity) {
++            this.popularity = popularity;
++        }
++
++        public Integer getVoteCount() {
++            return voteCount;
++        }
++
++        public void setVoteCount(Integer voteCount) {
++            this.voteCount = voteCount;
++        }
++
++        public Boolean getVideo() {
++            return video;
++        }
++
++        public void setVideo(Boolean video) {
++            this.video = video;
++        }
++
++        public Double getVoteAverage() {
++            return voteAverage;
++        }
++
++        public void setVoteAverage(Double voteAverage) {
++            this.voteAverage = voteAverage;
++        }
++
++    }
+Index: app/src/main/java/com/example/appfilms/MovieResults.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/MovieResults.java b/app/src/main/java/com/example/appfilms/MovieResults.java
+new file mode 100644
+--- /dev/null	(date 1613472477885)
++++ b/app/src/main/java/com/example/appfilms/MovieResults.java	(date 1613472477885)
+@@ -0,0 +1,61 @@
++package com.example.appfilms;
++
++import com.google.gson.annotations.SerializedName;
++
++import java.util.List;
++import java.util.List;
++import com.google.gson.annotations.Expose;
++import com.google.gson.annotations.SerializedName;
++import kotlin.Result;
++
++public class MovieResults {
++
++
++        private Integer page;
++
++        private List<Results> results = null;
++
++        private Integer totalResults;
++
++        private Integer totalPages;
++
++
++        public Integer getPage() {
++            return page;
++        }
++
++        public void setPage(Integer page) {
++            this.page = page;
++        }
++
++        public List<Results> getResults() {
++            return results;
++        }
++
++        public void setResults(List<Results> results) {
++            this.results = results;
++        }
++
++        public Integer getTotalResults() {
++            return totalResults;
++        }
++
++        public void setTotalResults(Integer totalResults) {
++            this.totalResults = totalResults;
++        }
++
++        public Integer getTotalPages() {
++            return totalPages;
++        }
++
++        public void setTotalPages(Integer totalPages) {
++            this.totalPages = totalPages;
++        }
++
++    }
++
++
++
++
++
++
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1612874553377)
++++ b/.idea/compiler.xml	(date 1612874553377)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="11" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1612949067433)
++++ b/.idea/gradle.xml	(date 1612949067433)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1612874202653)
++++ b/.idea/.gitignore	(date 1612874202653)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1613479642956)
++++ b/.idea/misc.xml	(date 1613479642956)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(date 1613311683482)
++++ b/.idea/uiDesigner.xml	(date 1613311683482)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/appfilms/Movie.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/Movie.java b/app/src/main/java/com/example/appfilms/Movie.java
+new file mode 100644
+--- /dev/null	(date 1613469196474)
++++ b/app/src/main/java/com/example/appfilms/Movie.java	(date 1613469196474)
+@@ -0,0 +1,37 @@
++package com.example.appfilms;
++
++import com.google.gson.annotations.Expose;
++import com.google.gson.annotations.SerializedName;
++
++public class Movie {
++
++    private Long id;
++
++    private String title;
++
++    private String posterPath;
++
++    public Long getId() {
++        return id;
++    }
++
++    public void setId(Long id) {
++        this.id = id;
++    }
++
++    public String getTitle() {
++        return title;
++    }
++
++    public void setTitle(String title) {
++        this.title = title;
++    }
++
++    public String getPosterPath() {
++        return posterPath;
++    }
++
++    public void setPosterPath(String posterPath) {
++        this.posterPath = posterPath;
++    }
++}
+Index: app/src/main/java/com/example/appfilms/MovieServices.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/MovieServices.java b/app/src/main/java/com/example/appfilms/MovieServices.java
+new file mode 100644
+--- /dev/null	(date 1613472043229)
++++ b/app/src/main/java/com/example/appfilms/MovieServices.java	(date 1613472043229)
+@@ -0,0 +1,20 @@
++package com.example.appfilms;
++
++import retrofit2.Call;
++import retrofit2.http.GET;
++import retrofit2.http.Path;
++import retrofit2.http.Query;
++
++public interface MovieServices {
++    public String BASE_URL = "https://api.themoviedb.org/3/";
++    public String CATEGORY = "popular";
++    public String LANGUAGE = "en-US";
++    public int PAGE = 1;
++    public String API_KEY = "16ea25e6c0e5762060a4759115605e50";
++
++    @GET("movie/popular")
++    Call<MovieResponse> getPopularMovies(@Query("api_key") String apiKey, @Query("language") String language, @Query("page") int page);
++
++    @GET("movie/{category}")
++    Call<MovieResults> listOfMovies(@Path("category") String category, @Query("api_key") String apiKey, @Query("language") String language, @Query("page") int page);
++}
+Index: app/src/main/java/com/example/appfilms/MovieResponse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/MovieResponse.java b/app/src/main/java/com/example/appfilms/MovieResponse.java
+new file mode 100644
+--- /dev/null	(date 1613469196389)
++++ b/app/src/main/java/com/example/appfilms/MovieResponse.java	(date 1613469196389)
+@@ -0,0 +1,52 @@
++package com.example.appfilms;
++
++import com.google.gson.annotations.Expose;
++import com.google.gson.annotations.SerializedName;
++
++import java.util.List;
++
++public class MovieResponse {
++
++    private int page;
++
++
++    private int totalResults;
++
++
++    private List<Movie> movies;
++
++
++    private int totalPages;
++
++    public int getPage() {
++        return page;
++    }
++
++    public void setPage(int page) {
++        this.page = page;
++    }
++
++    public int getTotalResults() {
++        return totalResults;
++    }
++
++    public void setTotalResults(int totalResults) {
++        this.totalResults = totalResults;
++    }
++
++    public List<Movie> getMovies() {
++        return movies;
++    }
++
++    public void setMovies(List<Movie> movies) {
++        this.movies = movies;
++    }
++
++    public int getTotalPages() {
++        return totalPages;
++    }
++
++    public void setTotalPages(int totalPages) {
++        this.totalPages = totalPages;
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/appfilms/MainMovie.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/MainMovie.java b/app/src/main/java/com/example/appfilms/MainMovie.java
+new file mode 100644
+--- /dev/null	(date 1613489269496)
++++ b/app/src/main/java/com/example/appfilms/MainMovie.java	(date 1613489269496)
+@@ -0,0 +1,68 @@
++package com.example.appfilms;
++
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++import android.widget.Toast;
++import androidx.annotation.NonNull;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
++import retrofit2.Call;
++import retrofit2.Callback;
++import retrofit2.Response;
++import retrofit2.Retrofit;
++import retrofit2.converter.gson.GsonConverterFactory;
++
++import java.util.List;
++
++import static com.example.appfilms.MovieServices.*;
++
++public class MainMovie extends AppCompatActivity {
++    public RecyclerView moviesList;
++    public MoviesAdapter adapter;
++    public Button button;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.recherche);
++
++        button = findViewById(R.id.btnValide);
++        moviesList = findViewById(R.id.movies_list);
++
++        button.setOnClickListener(v -> {
++            MovieServices movieServices = new Retrofit.Builder()
++                    .baseUrl(MovieServices.BASE_URL)
++                    .addConverterFactory(GsonConverterFactory.create())
++                    .build()
++                    .create(MovieServices.class);
++
++            movieServices.listOfMovies(MovieServices.CATEGORY, API_KEY, LANGUAGE, PAGE).enqueue(new Callback<MovieResults>() {
++                @Override
++                public void onResponse(Call<MovieResults> call, Response<MovieResults> response) {
++                    List<Results> results = response.body().getResults();
++                    System.out.println("connexion ok");
++
++                    MoviesAdapter adapter = new MoviesAdapter(results);
++                    moviesList.setAdapter(adapter);
++                    moviesList.setLayoutManager(new LinearLayoutManager(MainMovie.this));
++
++                    Toast.makeText(MainMovie.this, " connexion reussie", Toast.LENGTH_LONG).show();
++                }
++
++                @Override
++                public void onFailure(Call<MovieResults> call, Throwable t) {
++                    t.printStackTrace();
++                    System.out.println("connexion Nok");
++                    Toast.makeText(MainMovie.this, " connexion NON reussie", Toast.LENGTH_LONG).show();
++
++
++                }
++            });
++        });
++
++
++    }
++}
++
+Index: app/src/main/java/com/example/appfilms/MoviesAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/appfilms/MoviesAdapter.java b/app/src/main/java/com/example/appfilms/MoviesAdapter.java
+new file mode 100644
+--- /dev/null	(date 1613472876413)
++++ b/app/src/main/java/com/example/appfilms/MoviesAdapter.java	(date 1613472876413)
+@@ -0,0 +1,68 @@
++package com.example.appfilms;
++
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.ImageView;
++import android.widget.TextView;
++import androidx.recyclerview.widget.RecyclerView;
++import com.bumptech.glide.Glide;
++import com.bumptech.glide.request.RequestOptions;
++
++import java.util.List;
++
++public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
++
++    public List<Results> results;
++    public String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500";
++
++    public MoviesAdapter(List<Results> results) {
++        this.results = results;
++    }
++
++    @Override
++    public MovieViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
++        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mainmovie, parent, false);
++        return new MovieViewHolder(view);
++    }
++
++    @Override
++    public void onBindViewHolder(MovieViewHolder holder, int position) {
++        holder.bind(results.get(position));
++    }
++
++    @Override
++    public int getItemCount() {
++        return results.size();
++    }
++
++    class MovieViewHolder extends RecyclerView.ViewHolder {
++        //TextView releaseDate;
++        TextView title;
++        //TextView rating;
++        TextView descriptif;
++        ImageView poster;
++
++
++        public MovieViewHolder(View itemView) {
++            super(itemView);
++            //releaseDate = itemView.findViewById(R.id.movie_year);
++            title = itemView.findViewById(R.id.movie_title);
++           // rating = itemView.findViewById(R.id.item_movie_rating);
++            descriptif = itemView.findViewById(R.id.movie_desc);
++            poster = itemView.findViewById(R.id.movie_poster);
++
++        }
++
++        public void bind(Results results) {
++           // releaseDate.setText(movie.g().split("-")[0]);
++            title.setText(results.getTitle());
++            //rating.setText(String.valueOf(movie.getRating()));
++            descriptif.setText("");
++            Glide.with(itemView)
++                    .load(IMAGE_BASE_URL + results.getPosterPath())
++                    .apply(RequestOptions.placeholderOf(R.color.colorPrimary))
++                    .into(poster);
++        }
++        }
++    }
+\ No newline at end of file
+Index: app/src/main/res/layout/mainmovie.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/mainmovie.xml b/app/src/main/res/layout/mainmovie.xml
+new file mode 100644
+--- /dev/null	(date 1613478563547)
++++ b/app/src/main/res/layout/mainmovie.xml	(date 1613478563547)
+@@ -0,0 +1,16 @@
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++             xmlns:app="http://schemas.android.com/apk/res-auto"
++             xmlns:tools="http://schemas.android.com/tools"
++             android:layout_width="match_parent"
++             android:layout_height="match_parent">
++
++    <androidx.recyclerview.widget.RecyclerView
++            android:id="@+id/movies_list"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1612874578254)
++++ b/.idea/jarRepositories.xml	(date 1612874578254)
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="BintrayJCenter" />
++      <option name="name" value="BintrayJCenter" />
++      <option name="url" value="https://jcenter.bintray.com/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="Google" />
++      <option name="name" value="Google" />
++      <option name="url" value="https://dl.google.com/dl/android/maven2/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/layout/recherche.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/recherche.xml b/app/src/main/res/layout/recherche.xml
+new file mode 100644
+--- /dev/null	(date 1613480906355)
++++ b/app/src/main/res/layout/recherche.xml	(date 1613480906355)
+@@ -0,0 +1,89 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++             xmlns:app="http://schemas.android.com/apk/res-auto"
++             xmlns:tools="http://schemas.android.com/tools"
++             android:layout_width="match_parent"
++             android:layout_height="match_parent"
++             android:orientation="vertical">
++
++    <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_gravity="bottom"
++            android:layout_marginTop="@dimen/activity_margin"
++            android:background="@android:color/white"
++            android:orientation="vertical"
++            android:paddingBottom="@dimen/activity_margin"
++            android:paddingEnd="@dimen/activity_margin"
++            android:paddingLeft="@dimen/poster_thumb_width"
++            android:paddingRight="@dimen/activity_margin"
++            android:paddingStart="@dimen/poster_thumb_width"
++            android:paddingTop="@dimen/activity_margin_half">
++
++        <androidx.cardview.widget.CardView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                app:cardBackgroundColor="@color/placeholder_grey"
++                app:cardCornerRadius="3dp"
++                app:cardPreventCornerOverlap="false" android:layout_marginLeft="@dimen/activity_margin_half"
++                android:layout_marginTop="@dimen/activity_margin_half"
++                android:layout_marginStart="@dimen/activity_margin_half"
++                android:layout_marginRight="@dimen/activity_margin_half"
++                android:layout_marginEnd="@dimen/activity_margin_half"
++                android:layout_marginBottom="@dimen/activity_margin_half">
++
++        </androidx.cardview.widget.CardView>
++        <TextView
++                android:id="@+id/movie_year"
++                style="@style/TextAppearance.AppCompat.Caption"
++                android:layout_width="match_parent"
++                android:layout_height="33dp"
++                android:layout_marginLeft="@dimen/activity_margin_content"
++                android:layout_marginStart="@dimen/activity_margin_content"
++                android:alpha="0.38"
++                android:gravity="end"
++                android:maxLines="1"
++                android:textStyle="bold"
++                tools:text="Annee"/>
++
++        <ImageView
++                android:id="@+id/movie_poster"
++                android:layout_width="@dimen/poster_thumb_width"
++                android:layout_height="@dimen/poster_thumb_height"
++                android:contentDescription="Image"/>
++        <TextView
++                android:id="@+id/movie_title"
++                style="@style/TextAppearance.AppCompat.Subhead"
++                android:layout_width="match_parent"
++                android:layout_height="33dp"
++                android:layout_marginLeft="@dimen/activity_margin_content"
++                android:layout_marginStart="@dimen/activity_margin_content"
++                android:layout_marginTop="@dimen/activity_margin_quarter"
++                android:maxLines="1"
++                tools:text="Titre"/>
++
++        <TextView
++                android:id="@+id/movie_desc"
++                style="@style/TextAppearance.AppCompat.Caption"
++                android:layout_width="match_parent"
++                android:layout_height="300dp"
++                android:layout_marginLeft="16dp"
++                android:layout_marginStart="16dp"
++                android:layout_marginTop="16dp"
++                android:maxLines="2"
++                tools:text="Descriptif"/>
++
++    </LinearLayout>
++    <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content" android:orientation="horizontal">
++        <androidx.appcompat.widget.AppCompatAutoCompleteTextView android:layout_width="match_parent"
++                                                                 android:layout_height="wrap_content"/>
++        <Button
++                android:id="@+id/btnValide"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"/>
++
++    </LinearLayout>
++
++</RelativeLayout>
+\ No newline at end of file
